@@ -26,7 +26,7 @@ public class Solver {
     private class ManhattanPriority implements Comparator<Node> {
     	public int compare(Node n1, Node n2) {
     		int c1 = n1.board.manhattan() + n1.moves;
-    		int c2 = n2.board.manhattan() + n1.moves;
+    		int c2 = n2.board.manhattan() + n2.moves;
     		if (c1 < c2) return -1;
     		if (c1 > c2) return +1;
     		if (n1.board.hamming() == n2.board.hamming()) return 0;
